@@ -16,29 +16,26 @@
     <title>Getting Started with React</title>
 </head>
 <body>
-	<div id="react-container"></div>
-
+	<div id="reactComponent"></div>	
 	<script type="text/babel">
-
-		class Hello extends React.Component {
-			render() {
-				return (
-					<div>
-						<h1>Hello {this.props.firstName}</h1>
-						<p>Learning React Version {this.props.version}</p>
-					</div>
-				)
-			}
-		}
-
-		const HelloStateless = ({firstName}) => <h1>Hello {firstName}</h1>
-	
-		ReactDOM.render(
-			<HelloStateless firstName="Bill" version={16}/>,
-			document.getElementById('react-container')
+class CheckBox extends React.Component {
+	render(){
+		return (
+			<div>
+			
+			<label> Yes : </label>
+			<input type="checkbox" value="Yes"/>
+			</div>
 		)
+	}
+}
 
-	</script>
+ReactDOM.render(
+	<CheckBox/>,
+	document.getElementById('reactComponent')
+)
+
+</script>
 
 </body>
 </html>
