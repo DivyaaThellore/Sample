@@ -10,7 +10,7 @@
   			color: white;
   		}
 		  .smart{
-			  color:black
+			  color:red
 		  }
   	</style>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -27,21 +27,21 @@
 			render(){
 				return(<div>
 				<h1>Hello {this.props.firstName} </h1>
-				<p>this is react versiobn {this.props.version}</p>
+				<p>this is react version {this.props.version}</p>
 				</div>)
 			}
 		}
 
 		const HelloStateless=(props)=> (
-			<div>
-			<h1>Hello {props.firstName} </h1>
-			<p> This is the version {props.version}</p>
+			<div id="fancy">
+			<h1 class="heading">Hello {props.firstName} </h1>
+			<p class="smart"> This is the version {props.version}</p>
 			</div>
 			
 		)
 
 		ReactDOM.render(
-			<Hello firstName="Divyaa" version={16}/>,
+			<HelloStateless firstName="Divyaa" version={16}/>,
 			document.getElementById('react-container')
 		)
 
